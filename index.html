@@ -1,174 +1,190 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Yinuo Jing</title>
-  <meta name="author" content="Yinuo Jing">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="stylesheet.css">
+<meta charset="UTF-8">
+<title>Yinuo Jing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial;
+  background-color: #f5f5f5;
+  margin: 0;
+}
+
+/* 主卡片 */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* 标题 */
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+  margin-top: 40px;
+}
+
+/* 个人信息 */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* 链接 */
+a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.center {
+  text-align: center;
+}
+
+/* 论文 */
+.paper {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+  transition: 0.2s;
+}
+
+.paper:hover {
+  transform: translateY(-4px);
+}
+
+.paper img {
+  width: 160px;
+  border-radius: 8px;
+}
+
+.paper-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+</style>
+
 </head>
 
 <body>
-<table style="width:100%;max-width:900px;margin:auto;">
-<tbody>
+
+<div class="container">
 
 <!-- 个人信息 -->
-<tr>
-<td>
-<table style="width:100%;">
-<tr>
+<div class="profile">
+  <div style="flex:1;">
+    <h1>Yinuo Jing (井一诺)</h1>
 
-<td style="width:65%;vertical-align:middle;">
-  <p style="text-align:center;font-size:32px;">
-    <strong>Yinuo Jing (井一诺)</strong>
-  </p>
+    <p>
+      I am a PhD candidate at the Pattern Recognition and Intelligent System Laboratory, 
+      School of Artificial Intelligence, Beijing University of Posts and Telecommunications.
+    </p>
 
-  <p>
-    I am a PhD candidate at the Pattern Recognition and Intelligent System Laboratory, School of Artificial Intelligence, Beijing University of Posts and Telecommunications, Beijing (100876), China. I am supervised by Prof. Zhanyu Ma.   
-   </p>
-   <p>  
-    My research interests are in: Multimodal Large Models, Video Understanding, and Animal Behavior Recognition.
-  </p>
+    <p>
+      My research interests include Multimodal Large Models, Video Understanding, 
+      and Animal Behavior Recognition.
+    </p>
 
-  <p style="text-align:center;">
-    <a href="mailto:jingyinuo@bupt.edu.cn">Email</a> /
-    <a href="https://scholar.google.com/citations?hl=zh-CN&user=x7ZXz04AAAAJ">Google Scholar</a> /
-    <a href="https://github.com/jynkris1016">GitHub</a>
-  </p>
+    <p class="center">
+      <a href="mailto:jingyinuo@bupt.edu.cn">Email</a> /
+      <a href="https://scholar.google.com/">Google Scholar</a> /
+      <a href="https://github.com/">GitHub</a>
+    </p>
+  </div>
 
-</td>
-
-<td style="width:35%;">
-  <img src="images/profile.jpg" style="width:200px;height:200px;border-radius:50%;object-fit:cover;">
-</td>
-
-</tr>
-</table>
-</td>
-</tr>
+  <img src="images/profile.jpg">
+</div>
 
 <!-- Publications -->
-<tr>
-<td>
 <h2>Publications</h2>
-</td>
-</tr>
 
-<table style="width:100%;border-spacing:0 10px;">
+<div class="paper">
+  <img src="images/ethoclip.jpg">
+  <div>
+    <div class="paper-title">
+      EthoCLIP: Ontology-Enhanced Video-Language Pretraining for Animal Behavior Understanding
+    </div>
+    <p><strong>Yinuo Jing</strong>, Jinyan Wu, Zixi Yang, Kongming Liang, Xiatian Zhu, Zhanyu Ma.</p>
+    <p><em>CVPR 2026</em></p>
+    <a href="#">code</a>
+    <p>An ontology-enhanced framework for animal behavior understanding.</p>
+  </div>
+</div>
 
-<!-- Paper 1 -->
-<tr>
-<td style="width:25%;">
-  <img src="images/ethoclip.jpg" width="100%">
-</td>
+<div class="paper">
+  <img src="images/animalclip.jpg">
+  <div>
+    <div class="paper-title">
+      Animal-CLIP: A Dual-Prompt Enhanced Vision-Language Model for Animal Action Recognition
+    </div>
+    <p><strong>Yinuo Jing</strong>, Kongming Liang, Ruxu Zhang, Hao Sun, Yongxiang Li.</p>
+    <p><em>IJCV 2025</em></p>
+    <a href="#">paper</a> / <a href="#">code</a>
+    <p>Improves fine-grained alignment between visual and textual representations.</p>
+  </div>
+</div>
 
-<td style="width:75%;">
-  <strong class="papertitle">EthoCLIP: Ontology-Enhanced Video-Language Pretraining for Animal Behavior Understanding</strong>
-  <br>
-  <strong>Yinuo Jing</strong>, Jinyan Wu, Zixi Yang, Kongming Liang, Xiatian Zhu, Zhanyu Ma.
-  <br>
-  <em>CVPR 2026</em>
-  <br>
-  <a href="https://github.com/PRIS-CV/AnimalBand">code</a>
+<div class="paper">
+  <img src="images/animalbench.jpg">
+  <div>
+    <div class="paper-title">
+      Animal-Bench: Benchmarking Multimodal Video Models
+    </div>
+    <p><strong>Yinuo Jing</strong>, Ruxu Zhang, Kongming Liang, Yongxiang Li.</p>
+    <p><em>NeurIPS 2024</em></p>
+    <a href="#">paper</a> / <a href="#">code</a>
+    <p>A large-scale benchmark with 40K+ samples.</p>
+  </div>
+</div>
 
-  <p>
-    An ontology-enhanced framework that incorporates structured knowledge to improve video-language pretraining for animal behavior understanding.
-  </p>
-</td>
-</tr>
+<div class="paper">
+  <img src="images/prompt.jpg">
+  <div>
+    <div class="paper-title">
+      Category-Specific Prompts for Animal Action Recognition
+    </div>
+    <p><strong>Yinuo Jing</strong>, Chunyu Wang, Ruxu Zhang.</p>
+    <p><em>ACM MM 2023</em></p>
+    <a href="#">paper</a> / <a href="#">code</a>
+    <p>Enhances recognition and zero-shot generalization.</p>
+  </div>
+</div>
 
-<!-- Paper 2 -->
-<tr>
-<td>
-  <img src="images/animalclip.jpg" width="100%">
-</td>
+<div class="paper">
+  <img src="images/robench.jpg">
+  <div>
+    <div class="paper-title">
+      RO-Bench: Robustness Evaluation of Multimodal Large Models
+    </div>
+    <p>Zixi Yang, Jiapeng Li, <strong>Yinuo Jing</strong>, Kongming Liang.</p>
+    <p><em>ICASSP 2026</em></p>
+    <a href="#">paper</a>
+    <p>Evaluates robustness using counterfactual video generation.</p>
+  </div>
+</div>
 
-<td>
-  <strong class="papertitle">Animal-CLIP: A Dual-Prompt Enhanced Vision-Language Model for Animal Action Recognition</strong>
-  <br>
-  <strong>Yinuo Jing</strong>, Kongming Liang, Ruxu Zhang, Hao Sun, Yongxiang Li, Zhongjiang He, Zhanyu Ma.
-  <br>
-  <em>IJCV 2025</em>
-  <br>
-  <a href="https://link.springer.com/article/10.1007/s11263-025-02408-4">paper</a> /
-  <a href="https://github.com/PRIS-CV/Animal-CLIP">code</a>
-
-  <p>
-    A dual-prompt framework improving fine-grained alignment between visual and textual representations for animal action recognition.
-  </p>
-</td>
-</tr>
-
-<!-- Paper 3 -->
-<tr>
-<td>
-  <img src="images/animalbench.jpg" width="100%">
-</td>
-
-<td>
-  <strong class="papertitle">Animal-Bench: Benchmarking Multimodal Video Models for Animal-centric Video Understanding</strong>
-  <br>
-  <strong>Yinuo Jing</strong>, Ruxu Zhang, Kongming Liang, Yongxiang Li,
-Zhongjiang He, Zhanyu Ma, Jun Guo.
-  <br>
-  <em>NeurIPS 2024</em>
-  <br>
-  <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/8fa604a81e5a236e2f38e917109571a3-Paper-Conference.pdf">paper</a> /
-  <a href="https://github.com/PRIS-CV/Animal-Bench">code</a>
-
-  <p>
-    A large-scale benchmark with 40K+ samples for evaluating multimodal models in animal-centric video understanding.
-  </p>
-</td>
-</tr>
-
-<!-- Paper 4 -->
-<tr>
-<td>
-  <img src="images/prompt.jpg" width="100%">
-</td>
-
-<td>
-  <strong class="papertitle">Category-Specific Prompts for Animal Action Recognition</strong>
-  <br>
-  <strong>Yinuo Jing</strong>, Chunyu Wang, Ruxu Zhang, Kongming Liang, Zhanyu Ma.
-  <br>
-  <em>ACM MM 2023</em>
-  <br>
-  <a href="https://dl.acm.org/doi/pdf/10.1145/3581783.3612551">paper</a> /
-  <a href="https://github.com/PRIS-CV/Category-Specific-Prompt">code</a>
-
-  <p>
-    Introduces category-specific prompt learning to enhance animal action recognition and zero-shot generalization.
-  </p>
-</td>
-</tr>
-
-<!-- Paper 5 -->
-<tr>
-<td>
-  <img src="images/robench.jpg" width="100%">
-</td>
-
-<td>
-  <strong class="papertitle">RO-Bench: Robustness Evaluation of Multimodal Large Models</strong>
-  <br>
-  Zixi Yang, Jiapeng Li, Muxi Diao, <strong>Yinuo Jing</strong>, Kongming Liang.
-  <br>
-  <em>ICASSP 2026</em>
-  <br>
-  <a href="https://arxiv.org/pdf/2510.08936">paper</a>
-
-  <p>
-    A large-scale robustness benchmark using counterfactual video generation for evaluating multimodal models.
-  </p>
-</td>
-</tr>
-
-</table>
-
-</tbody>
-</table>
+</div>
 
 </body>
 </html>
